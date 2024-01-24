@@ -1,0 +1,27 @@
+---
+title: "Delineamento Inteiramente Casualizado"
+author: "Rick Mangueira"
+date: "2024-01-18"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Delineamento Inteiramente Casualizado utilizando a função 'aov'
+
+
+```{r, echo=TRUE}
+trat=c("A","A","B","B","C","C","D","D")
+de=c(30.4,29.2,27.7,27.1,27.1,24.8,25.5,28.8)
+modelo1 = aov(de ~ trat)
+anova(modelo1)
+```
+
+## Delineamento Inteiramente Casualizado utilizando o pacote ExpDes.pt
+```{r, echo=TRUE}
+require(ExpDes.pt)
+dic(trat, de)
+
+```
