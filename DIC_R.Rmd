@@ -23,5 +23,17 @@ anova(modelo1)
 ```{r, echo=TRUE}
 require(ExpDes.pt)
 dic(trat, de)
+?dic
 
 ```
+
+
+## Delineamento Inteiramente Casualizado utilizando o pacote ExpDes.pt
+```{r, echo=TRUE}
+dados=read.csv2("C:/Users/ricka/Desktop/UNESP/apresentações/d2.csv",h=T,sep = ";")
+attach(dados)
+require(ExpDes.pt)
+dic(trat, de)
+
+```
+
